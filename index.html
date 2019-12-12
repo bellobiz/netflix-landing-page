@@ -6,14 +6,36 @@
   <style>
     body {
       background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/2a67d7bb-5681-490a-8515-c7e322c6255e/7ee6ac19-9946-4d7d-9b6a-a4be31b230a7/NG-en-20191209-popsignuptwoweeks-perspective_alpha_website_small.jpg");
-      background-position: center;
+      background-position: top;
       background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    body * {
+      position: relative;
     }
 
     h1, h2 {
       color: white;
       font-family: "Helvetica Neue", Arial, sans-serif;
       text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    img {
+      width: 12%;
     }
 
     section {
@@ -26,20 +48,17 @@
 
     ul {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      padding: 0;
     }
 
     li#sign-in {
         background-color: #e50914;
-        line-height: normal;
-        padding: 20px 10px;
-        font-weight: 400;
-        font-size: 1rem;
+        padding: 10px 17px;
+        list-style: none;
         border-radius: 4px;
-        display: inline;
-        width: 80px;
-        font-family: sans-serif;
-        text-align: center;
+        font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
     #sign-in > a {
@@ -50,16 +69,17 @@
     button {
       color: white;
       background-color: #e50914;
-      border-radius: 4px;
+      border-radius: 2px;
       border: solid 4px #e50914;
-      padding: 20px;
+      padding: 13px 52px;
       text-align: center;
+      font-size: 26px;
       margin: 0;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      margin-top: 110px
+      margin-top: 180px
     }
   </style>
 </head>
@@ -67,7 +87,7 @@
   <nav>
     <ul>
       <li>
-        <img src= "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflex icon"; style="width: 20%;">
+        <img src= "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflex icon">
       </li>
       <li id="sign-in">
       <a href="#">Sign In</a>
